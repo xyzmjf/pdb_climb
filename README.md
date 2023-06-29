@@ -10,7 +10,7 @@ This code was created to meet the following basic requirements
 	
 	 * Snipping and joining' 3D molecular graphs - for molecules stored PDB format files.
 	 * Specify the atoms involved by atom name and residue number - not a numeric atom index
-	 * Allow very specific control over residue names an numbers as part of the building process
+	 * Allow very specific control over residue names and numbers as part of the building process
 
 Note that this process occurs by 'snipping' and 'joining' single bonds, not double or triple bonds.
 Note that the snipping and joining single bond should not be a ring bond. 
