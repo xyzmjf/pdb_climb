@@ -25,3 +25,17 @@ and can be used for any type of molecule in PDB format. The code is relatively s
 it focuses on the so called HETATM and ATOM records of PDB files. It does not seek to manipulate 
 and deal with the CONECT records specifying bonds between atoms. 
 
+
+Please see the Markdown files in the documentation folder for an introduction to the code and for 
+a description of the individual python scripts. 
+
+Having downloaded this repository you should have the following folders. 
+
+* documentation - This contains documentation in Markdown format and images used by these files.
+* pdb - A folder of potentially usedful PDB format files. 
+* frag - A folder of 'fragment' PDB files. These use the normal PDB format but follow the conventions 
+		described in the introductory documentation.
+* build - A series of molecule build files as used by the molbuild.py script. 
+
+Hope this is useful.
+
