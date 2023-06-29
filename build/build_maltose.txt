@@ -1,0 +1,11 @@
+# molbuild.py instructions to build maltose 
+
+# define files to be used
+# renumber and rename residues in molecule file 
+use frag/frag_4adglc.pdb as mol1 resnumber 1 resname GLC
+use frag/frag_4adglc.pdb as mol2 resnumber 2 resname GLC
+
+# join molecule and fragment PDB files
+join mol1 1.O1 1.C1 fragment mol2
+
+

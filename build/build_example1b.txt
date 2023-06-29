@@ -1,0 +1,13 @@
+# Define files to be used
+# Also renumber and rename residues in molecule file 
+# The 'use' command define a shorthand to molecules to be used 
+# It also allows residue names and numbers to be set conveniently 
+
+use benzene.pdb as mol1 resnumber 1 resname BEN 
+use frag/frag_ethyl.pdb as mol2 resnumber 2 resname ETH 
+
+# join molecule and fragment PDB files
+
+join mol1 1.H1 1.C1 fragment mol2
+save my_ethylbenzene.pdb 
+

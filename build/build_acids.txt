@@ -1,0 +1,31 @@
+# molbuild.py instructions to build a set of acids 
+
+# define files to be used
+# renumber and rename residues in molecule file 
+# start with Acetic acid residue name ACE
+use pdb/formic_acid.pdb as mol1 resnumber 1 resname ACE
+use frag/frag_methyl.pdb as mol2 resnumber 1 resname ACE 
+use frag/frag_ethyl.pdb as mol3 resnumber 1 resname ACE 
+use frag/frag_propyl.pdb as mol4 resnumber 1 resname ACE 
+use frag/frag_phenyl.pdb as mol5 resnumber 1 resname ACE 
+
+# join molecule and fragment PDB files
+
+# Ethanoic acid
+join mol1 1.H1 1.C01 fragment mol2
+save pdb/acid1.pdb
+
+# propanoic acid
+join mol1 1.H1 1.C01 fragment mol3
+save pdb/acid2.pdb
+
+# butanoic acid
+join mol1 1.H1 1.C01 fragment mol4
+save pdb/acid3.pdb
+
+# benzoic acid
+# non planar geometry
+join mol1 1.H1 1.C01 fragment mol5
+save pdb/acid4.pdb
+
+

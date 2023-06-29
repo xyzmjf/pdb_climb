@@ -1,0 +1,16 @@
+REMARK Filename =  temp_mol1.pdb
+REMARK delatom= 1.H2
+REMARK joinatom= 1.O1
+REMARK Fragemnt PDB file= temp_mol3.pdb
+REMARK bond length for  O1  and  C1  set to  1.42
+REMARK Initial bump distance= 2.28426819187
+REMARK Final bump distance= 2.3533695798
+ATOM      1  O1  ALC     1       0.000   0.000   0.000
+ATOM      3  H1  ALC     1       0.903  -0.000  -0.273
+ATOM      1  C1  ALC     1      -0.000   0.000   1.420
+ATOM      3  H1  ALC     1       0.274  -1.021   1.757
+ATOM      4  H2  ALC     1      -1.037   0.200   1.757
+ATOM      5  C2  ALC     1       0.966   1.037   1.970
+ATOM      6  H3  ALC     1       2.003   0.838   1.631
+ATOM      7  H4  ALC     1       0.693   2.058   1.634
+ATOM      8  H5  ALC     1       0.968   1.036   3.079

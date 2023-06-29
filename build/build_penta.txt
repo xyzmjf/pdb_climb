@@ -1,0 +1,16 @@
+# molbuild.py instructions to build 5mer 
+
+# define files to be used
+use pdb/bdglc.pdb as mol1 resnumber 1 resname GLC
+use frag/frag_4bdglc.pdb as mol2 resnumber 2
+use frag/frag_4bdglc.pdb as mol3 resnumber 3
+use frag/frag_4bdglc.pdb as mol4 resnumber 4
+use frag/frag_4bdglc.pdb as mol5 resnumber 5
+
+# join molecule and fragment PDB files
+join mol1 1.O1 1.C1 fragment mol2
+join current 2.O1 2.C1 fragment mol3
+join current 3.O1 3.C1 fragment mol4
+join current 4.O1 4.C1 fragment mol5
+
+

@@ -1,0 +1,15 @@
+# molbuild.py instructions to build substituted 2S0 IdoA found in heparin
+# using idoa2s0.pdb as start molecule
+# substitution 2 O-sulphated => replace O2-C2 with frag_2oso3
+# adjust residue names to IDS
+# adjust residue numbers to 1 
+
+# define files to be used
+use pdb/idoa2s0.pdb as mol1 resname IDS resnumber 1
+use frag/frag_2oso3.pdb as mol2 resname IDS resnumber 1
+
+
+# join molecule and fragment PDB files
+join mol1 1.O2 1.C2 fragment mol2
+
+

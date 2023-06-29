@@ -1,0 +1,18 @@
+# molbuild.py instructions to build substituted Glc found in heparin
+# using alpha-D-glucose as start molecule
+# substitutions to add are 6 O-sulphated => replace C6-O6 with frag_60s03
+# next substitution 2 N-sulphated => replace C2-O2 with frag_2hnso3
+# adjust residue names to SGN
+# adjust residue numbers to 1 
+
+# define files to be used
+use frag/frag_4adglc.pdb as mol1 resnumber 1 resname SGN 
+use frag/frag_6oso3.pdb as mol2 resnumber 1 resname SGN
+use frag/frag_2nhso3.pdb as mol3 resnumber 1 resname SGN
+
+
+# join molecule and fragment PDB files
+join mol1 1.O6 1.C6 fragment mol2
+join current 1.O2 1.C2 fragment mol3
+
+

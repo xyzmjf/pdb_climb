@@ -1,0 +1,8 @@
+
+# build glucose 2 sulphate
+
+use pdb/bdglc.pdb as mol1 resnumber 2 resname GLS
+use frag/frag_oso3.pdb as mol2 resnumber 2 resname GLS
+
+join mol1 2.O2 2.C2 fragment mol2 
+

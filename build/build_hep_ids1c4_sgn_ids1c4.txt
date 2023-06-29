@@ -1,0 +1,14 @@
+# molbuild.py instructions  
+# build heparin trisaccharide ids(1c4)-sgn-ids(1c4)
+
+# define files to be used
+use frag/frag_hepids1c4.pdb as mol1 resnumber 1 
+use frag/frag_hepsgn.pdb as mol2 resnumber 2
+use frag/frag_hepids1c4.pdb as mol3 resnumber 3 
+
+# join molecule and fragment PDB files
+join mol1 1.O1 1.C1 fragment mol2
+join current 2.O1 2.C1 fragment mol3
+
+
+

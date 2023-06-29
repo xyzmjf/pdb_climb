@@ -1,0 +1,14 @@
+# Create propylbenzene 
+
+use benzene.pdb as mol1 resnumber 1 resname BEN 
+use frag/frag_ethyl.pdb as mol2 resnumber 2 resname ETH 
+use frag/frag_ethyl.pdb as mol3 resnumber 3 resname ETH 
+
+# join molecule and fragment PDB files
+
+join mol1 1.H1 1.C1 fragment mol2
+# this join command removes all atoms at 2.C2 end of molecular graph
+# then joins an ethyl fragment onto atom 2.C1
+join current 2.C2 2.C1 fragment mol3 
+save my_propylbenzene.pdb 
+

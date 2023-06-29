@@ -1,0 +1,29 @@
+# molbuild.py instructions to build a set of alcohols 
+
+# define files to be used
+# renumber and rename residues in molecule file 
+use pdb/water.pdb as mol1 resnumber 1 resname ALC 
+use frag/frag_methyl.pdb as mol2 resnumber 1 resname ALC 
+use frag/frag_ethyl.pdb as mol3 resnumber 1 resname ALC 
+use frag/frag_propyl.pdb as mol4 resnumber 1 resname ALC 
+use frag/frag_phenyl.pdb as mol5 resnumber 1 resname ALC 
+
+# join molecule and fragment PDB files
+
+# methanol 
+join mol1 1.H2 1.O1 fragment mol2
+save pdb/alcohol1.pdb
+
+# ethanol 
+join mol1 1.H2 1.O1 fragment mol3
+save pdb/alcohol2.pdb
+
+# propanol 
+join mol1 1.H2 1.O1 fragment mol4
+save pdb/alcohol3.pdb
+
+# phenol 
+join mol1 1.H2 1.O1 fragment mol5
+save pdb/alcohol4.pdb
+
+

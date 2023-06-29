@@ -1,0 +1,12 @@
+# molbuild.py instructions to build trisaccharide 
+
+# define files to be used
+use pdb/bdglc.pdb as mol1 resnumber 1 resname GLC
+use frag/frag_4bdglc.pdb as mol2 resnumber 2 resname GLC
+use frag/frag_4bdglc.pdb as mol3 resnumber 3 resname GLC
+
+# join molecule and fragment PDB files
+join mol1 1.O1 1.C1 fragment mol2
+join current 2.O1 2.C1 fragment mol3
+
+

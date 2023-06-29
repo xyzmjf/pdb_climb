@@ -1,0 +1,72 @@
+# molbuild.py instructions to build a set of esters 
+
+# define files to be used
+# renumber and rename residues in molecule file 
+use pdb/acid1.pdb as mol1 resnumber 1 resname ACD 
+use pdb/acid2.pdb as mol2 resnumber 1 resname ACD 
+use pdb/acid3.pdb as mol3 resnumber 1 resname ACD 
+use pdb/acid4.pdb as mol4 resnumber 1 resname ACD 
+
+# renumber and rename residues in molecule file 
+# alcohol files have O1 and H1 as first and second atoms
+# Ready to use ad fragment files
+use pdb/alcohol1.pdb as molA resnumber 1 resname ALC 
+use pdb/alcohol2.pdb as molB resnumber 1 resname ALC 
+use pdb/alcohol3.pdb as molC resnumber 1 resname ALC 
+use pdb/alcohol4.pdb as molD resnumber 1 resname ALC 
+
+# join molecule and fragment PDB files
+
+# create 16 esters 
+# No looping done in this script
+
+join mol1 1.O1 1.C01 fragment molA
+save pdb/ester1a.pdb
+
+join mol2 1.O1 1.C01 fragment molA
+save pdb/ester2a.pdb
+
+join mol3 1.O1 1.C01 fragment molA
+save pdb/ester3a.pdb
+
+join mol4 1.O1 1.C01 fragment molA
+save pdb/ester4a.pdb
+
+join mol1 1.O1 1.C01 fragment molB
+save pdb/ester1b.pdb
+
+join mol2 1.O1 1.C01 fragment molB
+save pdb/ester2b.pdb
+
+join mol3 1.O1 1.C01 fragment molB
+save pdb/ester3b.pdb
+
+join mol4 1.O1 1.C01 fragment molB
+save pdb/ester4b.pdb
+
+
+join mol1 1.O1 1.C01 fragment molC
+save pdb/ester1c.pdb
+
+join mol2 1.O1 1.C01 fragment molC
+save pdb/ester2c.pdb
+
+join mol3 1.O1 1.C01 fragment molC
+save pdb/ester3c.pdb
+
+join mol4 1.O1 1.C01 fragment molC
+save pdb/ester4c.pdb
+
+
+join mol1 1.O1 1.C01 fragment molD
+save pdb/ester1d.pdb
+
+join mol2 1.O1 1.C01 fragment molD
+save pdb/ester2d.pdb
+
+join mol3 1.O1 1.C01 fragment molD
+save pdb/ester3d.pdb
+
+join mol4 1.O1 1.C01 fragment molD
+save pdb/ester4d.pdb
+
